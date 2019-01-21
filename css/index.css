@@ -1,0 +1,152 @@
+/*
+Monokai color pallete
+Black => #272822
+Red => #F92672
+Blue => #66D9EF
+Green => #A6E22E
+Orange => #FD971F
+*/
+
+* {
+	transition: all .25s;
+}
+
+body {
+	margin: 0;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: Arial;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#section1 {
+	background-image: url("../img/organic-wallpaper-1.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+}
+
+#section2 {
+	background-image: url("../img/organic-wallpaper-2.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	margin-top: -15vh;
+	clip-path: polygon(0 15%, 100% 1%, 100% 100%, 0 85%);
+}
+
+#section3 {
+	background-image: url("../img/organic-wallpaper-3.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+}
+
+#section2 .card {
+	display: none;
+	position: relative;
+	animation: animateright 0.4s;
+}
+
+#section3 {
+	margin-top: -15vh;
+}
+
+.card {
+	width: 50%;
+	padding: 5px 20px 15px;
+	box-shadow: 0 0 3rem #100e17;
+	border-radius: 10px;
+}
+
+.card-title {
+	font-size: 20px;
+	font-family: monospace;
+}
+
+.right {
+	float: right;
+}
+
+.card:hover {
+	box-shadow: 0 0 6rem #100e17;
+}
+
+.slideshow-indicators {
+	margin: 16px;
+}
+
+#scroll-up-btn {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	margin: 16px;
+	box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+
+	border: none;
+	outline: none;
+}
+
+/* Text styles */
+.italic {
+	font-style: italic;
+}
+
+.monospaced {
+	font-family: monospace;
+}
+
+/* Monokai colors */
+.monokai-black {
+	background-color: #272822;
+}
+
+.monokai-red {
+	background-color: #F92672;
+}
+
+.monokai-blue {
+	background-color: #66D9EF;
+}
+
+.monokai-green {
+	background-color: #A6E22E;
+}
+
+.monokai-orange {
+	background-color: #FD971F;
+}
+
+/* Animations */
+@keyframes animateright {
+	from {
+		right: -300px;
+		opacity: 0
+	} to {
+		right: 0;
+		opacity: 1
+	}
+}
+
+/* Media queries */
+@media screen and (max-width: 820px) {
+	.card {
+		width: 75%;
+	}
+}
